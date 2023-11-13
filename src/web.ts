@@ -1,10 +1,24 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { SpeechToTextPlugin } from './definitions';
+import type { SpeechParams, SpeechToTextPlugin } from './definitions';
 
 export class SpeechToTextWeb extends WebPlugin implements SpeechToTextPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  hasPermission(): Promise<{ permission: boolean; }> {
+    throw new Error('Method not implemented.');
+  }
+  initialize(): Promise<{ available: boolean; }> {
+    throw new Error('Method not implemented.');
+  }
+  locales(): Promise<{ languages: any[]; }> {
+    throw new Error('Method not implemented.');
+  }
+  stop(): Promise<{ stopped: boolean }> {
+    throw new Error('Method not implemented.');
+  }
+  cancel(): Promise<{ cancelled: boolean }> {
+    throw new Error('Method not implemented.');
+  }
+  listen(options: SpeechParams): Promise<{ listening: boolean; }> {
+    throw new Error(`Method not implemented. ${options}`);
   }
 }

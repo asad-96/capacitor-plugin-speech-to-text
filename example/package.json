@@ -13,12 +13,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/core": "latest",
+    "@capacitor/android": "^5.0.0",
     "@capacitor/camera": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "^5.0.0",
     "@capacitor/splash-screen": "latest",
     "capacitor-plugin-speech-to-text": "file:..",
-    "@capacitor/ios": "^5.0.0",
-    "@capacitor/android": "^5.0.0"
+    "eventing-bus": "^2.0.1",
+    "js-event-bus": "^1.1.1"
   },
   "devDependencies": {
     "@capacitor/cli": "latest",
